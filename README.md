@@ -242,16 +242,11 @@ Test suite:
 └── tests/
 ```
 
-## How To Present It
+## Why I Built This
 
-Short version:
+I am interested in detection engineering and AI security, so I wanted to build this as a guardrail rather than a chatbot demo. The main question I wanted to answer was: can we identify prompts that should not reach an LLM in the first place?
 
-> I built a model-agnostic prompt-injection guardrail for LLM applications. It sits in front of an AI model and classifies prompts as benign, suspicious, or malicious before the model sees them.
-
-Security-engineering version:
-
-> I treated prompt injection as a detection problem. The project has a rule layer for known attack patterns, an ML layer for softer suspicious language, a combiner that produces an operational verdict, and a UI/API demo that shows what would be blocked before reaching an LLM.
-
+I focused on false positives because many benign users will mention phrases like "ignore previous instructions" while asking legitimate security or developer questions.
 No API key is required because the public demo uses a mock AI panel. A real LLM provider could be added later behind the same guardrail.
 
 ## Limitations
